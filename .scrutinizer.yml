@@ -1,9 +1,9 @@
+filter:
+    excluded_paths:
+        - .scrutinizer.yml
 build:
     nodes:
         analysis:
-            filter:
-                excluded_paths:
-                    - .scrutinizer.yml
             resources:
                 cpus: 1
             project_setup:
