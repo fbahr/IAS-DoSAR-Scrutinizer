@@ -1,0 +1,13 @@
+build:
+    nodes:
+        analysis:
+            filter:
+                excluded_paths:
+                    - .scrutinizer.yml
+            resources:
+                cpus: 1
+            project_setup:
+                override: true
+            tests:
+                override:
+                    - php-scrutinizer-run --enable-security-analysis
