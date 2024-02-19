@@ -1,0 +1,51 @@
+# filter:
+#     excluded_paths:
+#         - .scrutinizer.yml
+build:
+    nodes:
+        analysis:
+            # resources:
+            #    cpus: 1
+            project_setup:
+                override: true
+            tests:
+                override:
+                    - 'php-scrutinizer-run --enable-security-analysis'
+checks:
+    php:
+        argument_type_checks: true
+        assignment_of_null_return: true
+        verify_property_names: true
+        verify_access_scope_valid: true
+        variable_existence: true
+        verify_argument_usable_as_reference: false
+        use_statement_alias_conflict: true
+        useless_calls: false
+        unused_variables: false
+        unused_properties: false
+        unused_parameters: false
+        unreachable_code: false
+        unused_methods: false
+        switch_fallthrough_commented: false
+        require_scope_for_methods: false
+        require_php_tag_first: false
+        property_assignments: false
+        parse_doc_comments: false
+        non_commented_empty_catch_block: false
+        no_trait_type_hints: false
+        no_trailing_whitespace: false
+        no_short_open_tag: false
+        no_property_on_interface: false
+        no_exit: false
+        no_debug_code: false
+        fix_doc_comments: false
+        duplication: false
+        check_method_contracts:
+            verify_interface_like_constraints: true
+            verify_documented_constraints: false
+            verify_parent_constraints: true
+        avoid_length_functions_in_loops: false
+        avoid_entity_manager_injection: false
+        avoid_closing_tag: false
+        avoid_superglobals: false
+        call_to_parent_method: true
